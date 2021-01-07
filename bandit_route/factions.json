@@ -19,7 +19,7 @@
     "description": "Hell's Raiders slaves!"
   },
   {
-    "//": "Faction that will spawn during OG Rep quest line",
+    "//": "Subfaction that will spawn during OG Rep quest line",
     "//2": "will be located in bandit camp, preferably not to be used anywhere else",
     "type": "faction",
     "id": "forest_snakes",

@@ -18,7 +18,6 @@
     "responses": [ { "text": "Shove your threats up your ass, <name_b>.", "topic": "TALK_Jerry_Bumpkin_talk_nope" } ]
   },
   {
-    "//": "Maybe add choice to let yourself been robed? Or just pay him",
     "type": "talk_topic",
     "id": "TALK_Jerry_Bumpkin_start",
     "dynamic_line": "Hello.  You are on my territory.  Show me respect or leave this place with new holes in your body.",

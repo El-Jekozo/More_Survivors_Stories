@@ -426,7 +426,6 @@
     }
   },
   {
-    "//": "TODO add all evac_center terrains",
     "id": "MISSION_bandit_fs_leader_3",
     "type": "mission_definition",
     "has_generic_rewards": false,

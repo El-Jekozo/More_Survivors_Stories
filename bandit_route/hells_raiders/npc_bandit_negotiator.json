@@ -1,6 +1,6 @@
 [
   {
-    "//": "TODO add everything: info, unlocks, prices etc.",
+    "//": "TODO add everything: info, unlocks, prices etc, maybe remove",
     "type": "npc",
     "id": "NPC_bandit_negotiator",
     "class": "NC_NONE",

@@ -229,7 +229,6 @@
     }
   },
   {
-    "//":"change bandit_camp_2 to default bandit_camp",
     "id": "MISSION_evac_guard3_2",
     "type": "mission_definition",
     "has_generic_rewards": false,
