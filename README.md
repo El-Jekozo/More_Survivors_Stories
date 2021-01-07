@@ -1,4 +1,4 @@
-#Not everyone turned into zombies. Some still struggle to live...
+# Not everyone turned into zombies. Some still struggling to live...
 
 Adds 7 new side stories (1 WIP), 1 mission for random NPCs and a story line for Hell's Raiders faction (in early stage of development).
 
@@ -8,4 +8,4 @@ Adds 7 new side stories (1 WIP), 1 mission for random NPCs and a story line for 
 2. IMPORTANT! Talk to OG rep, FM merchant, Doctor and Broker at least ONCE. You will get 4 'You met X' missions. This step is important due to a few JSON limitations.
 3. On the second mission of OG representative, find informant and choose the last reply.
 
-Share with me your thoughts about it! Report bugs, pass me your ideas on what may or should be added etc. My discord: 1123132123#2270
+Share with me your thoughts about it! Report bugs, pass me your ideas on what may or should be added, or just say Hi :) My discord: 1123132123#2270
