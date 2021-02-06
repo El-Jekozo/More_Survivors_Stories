@@ -198,7 +198,7 @@
         "text": "Here's your syringe.",
         "condition": { "u_has_item": "bandit_item_3" },
         "effect": [
-          { "u_comsume_item": "bandit_item_3" },
+          { "u_consume_item": "bandit_item_3" },
           "npc_die"
         ],
         "topic": "TALK_DONE"
@@ -231,7 +231,7 @@
     "type": "mission_definition",
     "name": { "str": "Retrieve scientist" },
     "goal": "MGOAL_ASSASSINATE",
-    "has_generic_reward": false,
+    "has_generic_rewards": false,
     "difficulty": 0,
     "value": 0,
     "start": {
