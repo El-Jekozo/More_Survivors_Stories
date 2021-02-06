@@ -21,13 +21,7 @@
       "yes": "Hello there.",
       "no": "I'm busy.  Talk to me later."
     },
-    "responses": [
-      {
-        "text": "Hi.",
-        "topic": "TALK_bandit_sb_mechanic1",
-        "effect": { "npc_first_topic": "TALK_bandit_sb_mechanic1" }
-      }
-    ]
+    "responses": [ { "text": "Hi.", "topic": "TALK_bandit_sb_mechanic1", "effect": { "npc_first_topic": "TALK_bandit_sb_mechanic1" } } ]
   },
   {
     "id": [ "TALK_bandit_sb_mechanic1", "TALK_bandit_sb_mechanic_Background" ],

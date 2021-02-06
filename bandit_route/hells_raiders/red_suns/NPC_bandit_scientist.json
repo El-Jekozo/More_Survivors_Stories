@@ -22,12 +22,7 @@
     "id": "TALK_bandit_rs_scientist_start1",
     "type": "talk_topic",
     "dynamic_line": "What do you want?  I don't have anything, I'm struggling to survive myself.  Please, go away.",
-    "responses": [
-      {
-        "text": "Not an option, <name_g>.  You need to go with me.",
-        "topic": "TALK_bandit_rs_scientist_start2"
-      }
-    ]
+    "responses": [ { "text": "Not an option, <name_g>.  You need to go with me.", "topic": "TALK_bandit_rs_scientist_start2" } ]
   },
   {
     "type": "talk_topic",

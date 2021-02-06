@@ -197,10 +197,7 @@
       {
         "text": "Here's your syringe.",
         "condition": { "u_has_item": "bandit_item_3" },
-        "effect": [
-          { "u_consume_item": "bandit_item_3" },
-          "npc_die"
-        ],
+        "effect": [ { "u_consume_item": "bandit_item_3" }, "npc_die" ],
         "topic": "TALK_DONE"
       },
       {

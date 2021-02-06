@@ -729,9 +729,7 @@
     "start": {
       "assign_mission_target": { "om_terrain": "ws_biker_dump_2_2" },
       "update_mapgen": { "place_npcs": [ { "class": "NPC_bandit_sb_leader", "x": 10, "y": 5, "target": true } ] },
-      "effect": [
-        { "u_buy_item": "bandit_item_2" }
-      ]
+      "effect": [ { "u_buy_item": "bandit_item_2" } ]
     },
     "end": {
       "opinion": { "trust": 2, "value": 2 },
