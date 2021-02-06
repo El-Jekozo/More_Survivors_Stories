@@ -1,0 +1,70 @@
+[
+  {
+    "type": "npc",
+    "id": "NPC_gs_slave2",
+    "class": "NC_SLAVE1",
+    "attitude": 0,
+    "mission": 8,
+    "chat": "TALK_gs_slave2",
+    "faction": "hells_raiders_slaves"
+  },
+  {
+    "id": [ "TALK_gs_slave2_1" ],
+    "type": "talk_topic",
+    "dynamic_line": "Hi.",
+    "responses": [ { "text": "Pack your stuff, we're going to your new home.", "topic": "TALK_gs_slave2_2" } ]
+  },
+  {
+    "id": [ "TALK_gs_slave2_2" ],
+    "type": "talk_topic",
+    "dynamic_line": "That's sad.",
+    "responses": [
+      {
+        "text": "Yeah.",
+        "topic": "TALK_DONE",
+        "effect": [ { "npc_first_topic": "TALK_gs_slave2_follow" }, { "add_mission": "MISSION_gs_slaves" } ]
+      }
+    ]
+  },
+  {
+    "id": [ "TALK_gs_slave2_follow" ],
+    "type": "talk_topic",
+    "dynamic_line": "So, are we, like, there?",
+    "responses": [
+      {
+        "text": "We're here.",
+        "topic": "TALK_DONE",
+        "condition": { "npc_at_om_location": "ws_biker_dump_2_2" },
+        "effect": [ "stop_following", { "npc_first_topic": "TALK_gs_slave2_at_sb" } ]
+      }
+    ]
+  },
+  {
+    "id": [ "TALK_gs_slave2_at_sb" ],
+    "type": "talk_topic",
+    "dynamic_line": "Hello there, boss.",
+    "responses": [ { "text": "Working hard, eh?", "topic": "TALK_gs_slave2_at_sb_work" }, { "text": "Yeah.", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": [ "TALK_gs_slave2_at_sb_work" ],
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_var": "narc_farm",
+      "type": "flag",
+      "context": "sb_farm_burned",
+      "value": "yes",
+      "yes": "Farm is burned, so I don't have anything to do around here.  I'm just passing time gambling and drinking.",
+      "no": "Sun is up, meself is working, sun is down, meself is dancing.  Every day, and every day of my new life…"
+    },
+    "responses": [
+      {
+        "truefalsetext": {
+          "true": "Work hard, and some day, you'll earn your freedom. *chuckle*",
+          "false": "Don't worry, they will find you a new task to work on.",
+          "condition": { "u_has_var": "narc_farm", "type": "flag", "context": "sb_farm_burned", "value": "yes" }
+        },
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

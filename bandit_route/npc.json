@@ -74,5 +74,26 @@
     "mission": 8,
     "chat": "TALK_HH_GIRL",
     "faction": "no_faction"
+  },
+  {
+    "type": "npc",
+    "id": "guard_fm",
+    "//": "A generic traveling guard for the Free Merchants faction.",
+    "name_suffix": "Guard",
+    "class": "NC_BOUNTY_HUNTER",
+    "attitude": 0,
+    "mission": 10,
+    "chat": "TALK_DONE",
+    "faction": "free_merchants"
+  },
+  {
+    "type": "npc",
+    "id": "NPC_random_fm",
+    "//": "Generic traveling random refugee for the Free Merchants.",
+    "class": "NC_NONE",
+    "attitude": 0,
+    "mission": 10,
+    "chat": "TALK_DONE",
+    "faction": "free_merchants"
   }
 ]

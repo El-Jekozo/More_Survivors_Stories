@@ -15,5 +15,22 @@
     "id": "NC_naked_girl_worn",
     "subtype": "collection",
     "entries": [ { "item": "panties" }, { "item": "stockings" } ]
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_SLAVE1",
+    "name": { "str": "Slave" },
+    "job_description": "Slave.",
+    "traits": [ { "group": "NPC_starting_traits" }, { "group": "Appearance_demographics" } ],
+    "worn_override": "NC_SLAVE1_worn",
+    "weapon_override": "EMPTY_GROUP",
+    "carry_override": "EMPTY_GROUP",
+    "common": false
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SLAVE1_worn",
+    "subtype": "collection",
+    "entries": [ { "item": "panties" } ]
   }
 ]

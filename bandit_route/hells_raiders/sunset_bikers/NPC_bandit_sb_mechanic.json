@@ -10,6 +10,7 @@
     "faction": "sunset_bikers"
   },
   {
+    "//": "'condition': { 'u_has_var': 'bandit_dump_unlocked', 'type': 'flag', 'context': 'missions_sb', 'value': 'yes' },",
     "id": [ "TALK_bandit_sb_mechanic" ],
     "type": "talk_topic",
     "dynamic_line": {
@@ -24,7 +25,6 @@
       {
         "text": "Hi.",
         "topic": "TALK_bandit_sb_mechanic1",
-        "condition": { "u_has_var": "biker_dump_unlocked", "type": "flag", "context": "missions_sb", "value": "yes" },
         "effect": { "npc_first_topic": "TALK_bandit_sb_mechanic1" }
       }
     ]

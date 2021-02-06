@@ -24,5 +24,27 @@
     "price_postapoc": 0,
     "volume": "0 ml",
     "flags": [ "ZERO_WEIGHT", "TRADER_AVOID", "TRADER_KEEP" ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "bandit_item_3",
+    "name": { "str_sp": "strange syringe" },
+    "weight": "0 g",
+    "color": "light_blue",
+    "symbol": "O",
+    "description": "A medical syringe with strange looking liquid.",
+    "price": 0,
+    "price_postapoc": 0,
+    "volume": "0 ml",
+    "flags": [ "ZERO_WEIGHT", "TRADER_AVOID", "TRADER_KEEP" ]
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "rs_scientist_notes",
+    "copy-from": "record_patient",
+    "name": { "str_sp": "lab notes" },
+    "description": "Large folder full of different lab notes.",
+    "flags": [ "TRADER_AVOID" ]
   }
 ]
