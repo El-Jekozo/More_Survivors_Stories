@@ -33,8 +33,6 @@
     "wealth": 10000000,
     "currency": "jerky",
     "relations": {
-      "red_suns": { "kill on sight": false, "lets you in": true, "knows your voice": true },
-      "hells_raiders": { "kill on sight": false, "lets you in": true, "knows your voice": true },
       "forest_snakes": {
         "kill on sight": false,
         "watch your back": true,
@@ -44,7 +42,10 @@
         "defends your space": true,
         "knows your voice": true
       },
+      "hells_raiders": { "kill on sight": false, "lets you in": true, "knows your voice": true },
+      "red_suns": { "kill on sight": false, "lets you in": true, "knows your voice": true },
       "sunset_bikers": { "kill on sight": false, "lets you in": true, "knows your voice": true },
+      "grim_sisters": { "kill on sight": false, "lets you in": true, "knows your voice": true },
       "free_merchants": { "kill on sight": true },
       "old_guard": { "kill on sight": true }
     },
@@ -81,6 +82,7 @@
       "hells_raiders": { "kill on sight": false, "lets you in": true, "knows your voice": true },
       "forest_snakes": { "kill on sight": false, "lets you in": true, "knows your voice": true },
       "sunset_bikers": { "kill on sight": false, "lets you in": true, "knows your voice": true },
+      "grim_sisters": { "kill on sight": false, "lets you in": true, "knows your voice": true },
       "free_merchants": { "kill on sight": true },
       "old_guard": { "kill on sight": true }
     },
@@ -113,9 +115,43 @@
         "defends your space": true,
         "knows your voice": true
       },
+      "grim_sisters": { "kill on sight": false, "lets you in": true, "knows your voice": true },
       "free_merchants": { "kill on sight": true },
       "old_guard": { "kill on sight": true }
     },
     "description": "One of the Hell's Raiders gang of hooligans and bandits that preys upon other survivors.  Junkies, bike freaks and other iron-horse-lovers that rides on desolated streets on their roaring horses of freedom."
+  },
+  {
+    "//": "Subfaction that related to one of the Sunset Bikers quests",
+    "//2": "can be found at prison_1, may be used anywhere else",
+    "//3": "TODO write description",
+    "type": "faction",
+    "id": "grim_sisters",
+    "name": "Grim Sisters",
+    "likes_u": -25,
+    "respects_u": -25,
+    "known_by_u": false,
+    "size": 30,
+    "power": 30,
+    "food_supply": 10000,
+    "wealth": 450000,
+    "relations": {
+      "grim_sisters": {
+        "kill on sight": false,
+        "watch your back": true,
+        "share my stuff": true,
+        "guard your stuff": true,
+        "lets you in": true,
+        "defends your space": true,
+        "knows your voice": true
+      },
+      "hells_raiders": { "kill on sight": false, "lets you in": true, "knows your voice": true },
+      "forest_snakes": { "kill on sight": false, "lets you in": true, "knows your voice": true },
+      "red_suns": { "kill on sight": false, "lets you in": true, "knows your voice": true },
+      "sunset_bikers": { "kill on sight": false, "lets you in": true, "knows your voice": true },
+      "free_merchants": { "kill on sight": true },
+      "old_guard": { "kill on sight": true }
+    },
+    "description": "One of the Hell's Raiders gang of hooligans and bandits that preys upon other survivors.  Yes."
   }
 ]

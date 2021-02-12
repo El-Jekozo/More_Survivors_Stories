@@ -3,7 +3,7 @@
     "type": "talk_topic",
     "id": [ "TALK_GRIM_SISTERS" ],
     "dynamic_line": {
-      "npc_male": true,
+      "u_male": true,
       "yes": {
         "npc_has_var": "talked_once",
         "type": "flag",
@@ -21,7 +21,6 @@
       "effect": { "npc_add_var": "talked_once", "type": "flag", "context": "talked", "value": "yes" }
     },
     "responses": [
-      { "text": "Show what you are capable of.", "topic": "TALK_DONE", "effect": "insult_combat" },
       {
         "text": "…",
         "condition": { "npc_has_var": "talked_once", "type": "flag", "context": "talked", "value": "yes" },
@@ -29,7 +28,20 @@
         "topic": "TALK_DONE",
         "switch": true
       },
-      { "text": "Don't be nervous, please.", "topic": "TALK_DONE", "switch": true }
+      {
+        "text": "Show what you are capable of.",
+        "condition": "u_male",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat",
+        "switch": true,
+        "default": true
+      },
+      {
+        "truefalsetext": { "true": "Don't be nervous, please.", "false": "Thanks.", "condition": "u_male" },
+        "topic": "TALK_DONE",
+        "switch": true,
+        "default": true
+      }
     ]
   }
 ]

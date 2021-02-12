@@ -1,0 +1,55 @@
+[
+  {
+    "type": "effect_type",
+    "id": "guards_distracted"
+  },
+  {
+    "type": "npc",
+    "id": "NPC_bandit_gs_prisoner1",
+    "class": "NC_NONE",
+    "attitude": 1,
+    "mission": 8,
+    "chat": "TALK_bandit_gs_prisoner1_1",
+    "faction": "hells_raiders_slaves"
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_1",
+    "type": "talk_topic",
+    "dynamic_line": { "u_male": true, "yes": "Psst, hey, you, come 'ere, <name_g>.", "no": "AHH, NO MORE INSERTION PUNISHMENTS, PLEASE!" },
+    "responses": [
+      { "text": "Huh?  You talking to me?", "topic": "TALK_bandit_gs_prisoner1_2", "condition": "u_male", "switch": true },
+      { "text": "Weird.", "topic": "TALK_DONE", "effect": "end_conversation", "switch": true }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_2",
+    "type": "talk_topic",
+    "dynamic_line": "Yes, you, come here.  I didn't see you around here, <name_g>.  Did they caught you and bring here in chains?",
+    "responses": [
+      { "text": "Nah, I'm not a looser.", "topic": "TALK_DONE" },
+      { "text": "I'm not supposed to talk to prisoners, sorry.", "topic": "TALK_DONE", "effect": "end_conversation" }
+    ]
+  },
+  {
+    "id": [ "TALK_bandit_gs_prisoner1", "TALK_bandit_gs_prisoner1_Background" ],
+    "type": "talk_topic",
+    "dynamic_line": "<greet>",
+    "responses": [
+      { "text": "About that job…", "condition": "has_assigned_mission", "topic": "TALK_MISSION_INQUIRE" },
+      { "text": "<BGSS_intro_question>", "topic": "TALK_bandit_gs_prisoner1_Background" },
+      { "text": "Do you need any help?", "topic": "TALK_MISSION_LIST" },
+      { "text": "Goodbye.", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": [ "TALK_bandit_gs_prisoner1_Background" ],
+    "type": "talk_topic",
+    "dynamic_line": "<greet>"
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "bandit_gs_prisoner1_escape",
+    "method": "json",
+    "object": { "place_terrain": [ { "ter": "t_hole", "x": 13, "y": 20 } ] }
+  }
+]

@@ -67,6 +67,18 @@
   },
   {
     "type": "npc",
+    "id": "bandit_gs",
+    "//": "Generic pistol/rifle focused guard for the Grim Sisters faction.",
+    "name_suffix": "Banditess",
+    "class": "NC_SCAVENGER",
+    "gender": "female",
+    "attitude": 0,
+    "mission": 8,
+    "chat": "TALK_GRIM_SISTERS",
+    "faction": "grim_sisters"
+  },
+  {
+    "type": "npc",
     "id": "NPC_hh_girl",
     "class": "NC_naked_girl",
     "gender": "female",

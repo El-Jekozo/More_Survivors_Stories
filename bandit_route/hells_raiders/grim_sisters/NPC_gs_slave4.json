@@ -1,33 +1,6 @@
 [
   {
-    "type": "npc",
-    "id": "NPC_gs_slave4",
-    "class": "NC_SLAVE1",
-    "attitude": 0,
-    "mission": 8,
-    "chat": "TALK_gs_slave4",
-    "faction": "hells_raiders_slaves"
-  },
-  {
-    "id": [ "TALK_gs_slave4_1" ],
-    "type": "talk_topic",
-    "dynamic_line": "Hi.",
-    "responses": [ { "text": "Pack your stuff, we're going to your new home.", "topic": "TALK_gs_slave4_2" } ]
-  },
-  {
-    "id": [ "TALK_gs_slave4_2" ],
-    "type": "talk_topic",
-    "dynamic_line": "That's sad.",
-    "responses": [
-      {
-        "text": "Yeah.",
-        "topic": "TALK_DONE",
-        "effect": [ { "npc_first_topic": "TALK_gs_slave4_follow" }, { "add_mission": "MISSION_gs_slaves" } ]
-      }
-    ]
-  },
-  {
-    "id": [ "TALK_gs_slave4_follow" ],
+    "id": [ "TALK_bandit_gs_slave4_follow" ],
     "type": "talk_topic",
     "dynamic_line": "So, are we, like, there?",
     "responses": [
@@ -35,18 +8,21 @@
         "text": "We're here.",
         "topic": "TALK_DONE",
         "condition": { "npc_at_om_location": "ws_biker_dump_2_2" },
-        "effect": [ "stop_following", { "npc_first_topic": "TALK_gs_slave4_at_sb" } ]
+        "effect": [ "stop_following", { "npc_first_topic": "TALK_bandit_gs_slave4_at_sb" }, "mission_success", "clear_mission" ]
       }
     ]
   },
   {
-    "id": [ "TALK_gs_slave4_at_sb" ],
+    "id": [ "TALK_bandit_gs_slave4_at_sb" ],
     "type": "talk_topic",
     "dynamic_line": "Hello there, boss.",
-    "responses": [ { "text": "Working hard, eh?", "topic": "TALK_gs_slave4_at_sb_work" }, { "text": "Yeah.", "topic": "TALK_DONE" } ]
+    "responses": [
+      { "text": "Working hard, eh?", "topic": "TALK_bandit_gs_slave4_at_sb_work" },
+      { "text": "Yeah.", "topic": "TALK_DONE" }
+    ]
   },
   {
-    "id": [ "TALK_gs_slave4_at_sb_work" ],
+    "id": [ "TALK_bandit_gs_slave4_at_sb_work" ],
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_var": "narc_farm",

@@ -82,7 +82,7 @@
     "//": "TODO write something",
     "type": "talk_topic",
     "id": "TALK_bandit_rs_merchant_busy",
-    "dynamic_line": "Ah, I've got a lot of work recently.  Let's talk about it later."
+    "dynamic_line": "Ah, I've got a lot of work recently.  Let's talk about it later.  In the meantime, you can help us with basement cleaning."
   },
   {
     "type": "talk_topic",
@@ -150,12 +150,26 @@
           "type": "flag",
           "context": "open_orders",
           "value": "yes",
-          "no": "  By the way, my guys were recently able to recapture our old weapons depot from <zombies>.  Since you have helped us a lot, I can sell you some of our premium merchandise.  With some delays in delivery, though."
+          "no": {
+            "u_compare_var": "fs_leader_mission_khh",
+            "type": "count",
+            "context": "unmarked_mission_progress",
+            "op": ">=",
+            "value": 3,
+            "yes": "  By the way, my guys were recently able to recapture our old weapons depot from <zombies>.  Since you have helped us a lot, I can sell you some of our premium merchandise.  With some delays in delivery, though."
+          }
         }
       ]
     },
     "speaker_effect": {
       "sentinel": "opened_r_t",
+      "condition": {
+        "u_compare_var": "fs_leader_mission_khh",
+        "type": "count",
+        "context": "unmarked_mission_progress",
+        "op": ">=",
+        "value": 3
+      },
       "effect": { "npc_add_var": "open_rare_trade", "type": "flag", "context": "open_orders", "value": "yes" }
     }
   },
@@ -620,7 +634,7 @@
       {
         "truefalsetext": {
           "true": "He don't want to pay not even want to budge.",
-          "false": "What payment?  I thought you discussed that question with him.",
+          "false": "What payment?  I thought you discussed that with him.",
           "condition": { "u_compare_var": "bandit_sb_leader_pay", "type": "flag", "context": "payment", "op": ">=", "value": 2 }
         },
         "topic": "TALK_bandit_rs_merchant_mission2_ask",
@@ -638,12 +652,12 @@
       "context": "payment",
       "op": ">=",
       "value": 2,
-      "yes": "That <name_b> didn't give you anything?  Again, creating problems for no reason.  Tell him that I'll blow up his <swear> <shitty> dump cabin with his <name_b>'s if he doesn't pay!",
+      "yes": "That <name_b> didn't give you anything?  And again he creates problems for no reason.  Tell him that I'll blow up his <swear> <shitty> dump cabin with his <name_b>'s inside if he doesn't pay!",
       "no": "What?  You were supposed to get paid for that package.  Return to him and collect your payment, <name_b>."
     },
     "speaker_effect": [
       {
-        "sentinel": "mission2_ask2",
+        "sentinel": "mission2_ask1",
         "condition": { "u_compare_var": "bandit_sb_leader_pay", "type": "flag", "context": "payment", "op": "<", "value": 1 },
         "effect": { "u_add_var": "bandit_sb_leader_pay", "type": "flag", "context": "payment", "value": "1" }
       },
@@ -739,7 +753,7 @@
     "dialogue": {
       "describe": "-",
       "offer": "So, I still need to deliver that package.  Conditions are the same.",
-      "accepted": "Good. Grab the package and go.",
+      "accepted": "Good. Grab the package and go.  By the way, he ordered it some time ago, and I'm not sure if he's still waiting for it.  Well, you're a clever pal, right?  You'll find a way to deliver it.",
       "rejected": "Okay, I'll look for someone else.",
       "advice": "You take the parcel and, without a second thought, bring it to the addressee.",
       "inquire": "-",

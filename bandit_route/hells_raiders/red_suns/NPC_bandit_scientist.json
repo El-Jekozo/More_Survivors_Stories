@@ -174,7 +174,7 @@
               "u_compare_var": "fs_leader_mission_khh",
               "type": "count",
               "context": "unmarked_mission_progress",
-              "op": ">",
+              "op": ">=",
               "value": 1
             }
           ]

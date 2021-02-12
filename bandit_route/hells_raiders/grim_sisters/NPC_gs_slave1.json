@@ -1,33 +1,6 @@
 [
   {
-    "type": "npc",
-    "id": "NPC_gs_slave1",
-    "class": "NC_SLAVE1",
-    "attitude": 0,
-    "mission": 8,
-    "chat": "TALK_gs_slave1",
-    "faction": "hells_raiders_slaves"
-  },
-  {
-    "id": [ "TALK_gs_slave1_1" ],
-    "type": "talk_topic",
-    "dynamic_line": "Hi.",
-    "responses": [ { "text": "Pack your stuff, we're going to your new home.", "topic": "TALK_gs_slave1_2" } ]
-  },
-  {
-    "id": [ "TALK_gs_slave1_2" ],
-    "type": "talk_topic",
-    "dynamic_line": "That's sad.",
-    "responses": [
-      {
-        "text": "Yeah.",
-        "topic": "TALK_DONE",
-        "effect": [ { "npc_first_topic": "TALK_gs_slave1_follow" }, { "add_mission": "MISSION_gs_slaves" } ]
-      }
-    ]
-  },
-  {
-    "id": [ "TALK_gs_slave1_follow" ],
+    "id": [ "TALK_bandit_gs_slave1_follow" ],
     "type": "talk_topic",
     "dynamic_line": "So, are we, like, there?",
     "responses": [
@@ -35,18 +8,21 @@
         "text": "We're here.",
         "topic": "TALK_DONE",
         "condition": { "npc_at_om_location": "ws_biker_dump_2_2" },
-        "effect": [ "stop_following", { "npc_first_topic": "TALK_gs_slave1_at_sb" } ]
+        "effect": [ "stop_following", { "npc_first_topic": "TALK_bandit_gs_slave1_at_sb" }, "mission_success", "clear_mission" ]
       }
     ]
   },
   {
-    "id": [ "TALK_gs_slave1_at_sb" ],
+    "id": [ "TALK_bandit_gs_slave1_at_sb" ],
     "type": "talk_topic",
     "dynamic_line": "Hello there, boss.",
-    "responses": [ { "text": "Working hard, eh?", "topic": "TALK_gs_slave1_at_sb_work" }, { "text": "Yeah.", "topic": "TALK_DONE" } ]
+    "responses": [
+      { "text": "Working hard, eh?", "topic": "TALK_bandit_gs_slave1_at_sb_work" },
+      { "text": "Yeah.", "topic": "TALK_DONE" }
+    ]
   },
   {
-    "id": [ "TALK_gs_slave1_at_sb_work" ],
+    "id": [ "TALK_bandit_gs_slave1_at_sb_work" ],
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_var": "narc_farm",
@@ -66,35 +42,5 @@
         "topic": "TALK_DONE"
       }
     ]
-  },
-  {
-    "id": "MISSION_gs_slaves",
-    "type": "mission_definition",
-    "has_generic_rewards": false,
-    "name": { "str": "Protect slave" },
-    "goal": "MGOAL_CONDITION",
-    "goal_condition": {
-      "npc_compare_time_since_var": "annoy_player",
-      "type": "time",
-      "context": "annoy_player_like_really_a_lot_at_least_i_want_to_do_it_that_way",
-      "op": ">",
-      "time": "5 m"
-    },
-    "difficulty": 0,
-    "value": 0,
-    "end": { "effect": { "u_adjust_var": "slaves_for_sb", "type": "count", "context": "alive", "adjustment": 1 } },
-    "fail": { "effect": { "u_adjust_var": "slaves_for_sb", "type": "count", "context": "dead", "adjustment": 1 } },
-    "origins": [ "ORIGIN_SECONDARY" ],
-    "dialogue": {
-      "describe": "-",
-      "offer": "-",
-      "accepted": "-",
-      "rejected": "-",
-      "advice": "-",
-      "inquire": "-",
-      "success": "-",
-      "success_lie": "-",
-      "failure": "-"
-    }
   }
 ]

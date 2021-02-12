@@ -1,0 +1,17 @@
+[
+  {
+    "type": "npc",
+    "id": "bandit_gs_1",
+    "class": "NC_SCAVENGER",
+    "attitude": 0,
+    "mission": 8,
+    "chat": "TALK_bandit_gs_1",
+    "faction": "grim_sisters"
+  },
+  {
+    "id": [ "TALK_bandit_gs_1" ],
+    "type": "talk_topic",
+    "dynamic_line": "Hi.",
+    "responses": [ { "text": "Hello.", "topic": "TALK_DONE" } ]
+  }
+]

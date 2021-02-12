@@ -143,30 +143,32 @@
     "dynamic_line": "Did you bring them here, partner?",
     "responses": [
       {
-        "text": "All safe.",
-        "topic": "TALK_bandit_sb_drugmaker_slaves_complete",
-        "condition": {
-          "or": [
-            { "u_has_var": "slaves_for_sb", "type": "count", "context": "alive", "value": "4" },
-            { "u_has_trait": "DEBUG_MIND_CONTROL" }
-          ]
-        }
-      },
-      {
         "text": "I've got only some of them.",
         "topic": "TALK_bandit_sb_drugmaker_slaves_complete",
         "condition": {
-          "and": [
-            { "u_compare_var": "slaves_for_sb", "type": "count", "context": "alive", "op": ">", "value": 0 },
-            { "not": { "u_has_mission": "MISSION_gs_slaves" } }
+          "or": [
+            {
+              "and": [
+                { "u_compare_var": "slaves_for_sb", "type": "count", "context": "alive", "op": ">", "value": 0 },
+                { "not": { "u_has_mission": "MISSION_gs_slaves" } }
+              ]
+            },
+            { "u_has_trait": "DEBUG_MIND_CONTROL" }
           ]
-        }
+        },
+        "switch": true
       },
       {
         "text": "I'm sorry, I couldn't bring them alive…",
         "topic": "TALK_MISSION_FAILURE",
-        "condition": { "u_has_var": "slaves_for_sb", "type": "count", "context": "dead", "value": "4" },
-        "effect": "mission_failure"
+        "condition": {
+          "and": [
+            { "u_compare_var": "slaves_for_sb", "type": "count", "context": "dead", "op": ">", "value": 0 },
+            { "not": { "u_has_mission": "MISSION_gs_slaves" } }
+          ]
+        },
+        "effect": "mission_failure",
+        "switch": true
       },
       { "text": "Nothing, really.", "topic": "TALK_DONE" }
     ]
@@ -174,16 +176,19 @@
   {
     "type": "talk_topic",
     "id": "TALK_bandit_sb_drugmaker_slaves_complete",
-    "dynamic_line": "Why are there so few of them?  To hell with it, as long as they work.",
-    "speaker_effect": {
-      "effect": [
-        "mission_success",
-        "clear_mission",
-        { "u_lose_var": "slaves_for_sb", "type": "count", "context": "dead" },
-        { "u_lose_var": "slaves_for_sb", "type": "count", "context": "alive" },
-        { "npc_add_var": "wait_for_farm", "type": "time", "context": "open_mission", "time": true }
-      ]
-    },
+    "dynamic_line": "Why are there so few of them?  Fuck it, as long as they work.",
+    "speaker_effect": [
+      {
+        "effect": [
+          "mission_success",
+          "clear_mission",
+          { "u_lose_var": "slaves_for_sb", "type": "count", "context": "dead" },
+          { "u_lose_var": "slaves_for_sb", "type": "count", "context": "alive" },
+          { "u_lose_var": "gs_take_slaves", "type": "count", "context": "take_slaves" },
+          { "npc_add_var": "wait_for_farm", "type": "time", "context": "open_mission", "time": true }
+        ]
+      }
+    ],
     "responses": [ { "text": "…", "topic": "TALK_DONE" } ]
   },
   {
@@ -247,7 +252,7 @@
     "followup": "MISSION_bandit_sb_drugmaker_4",
     "dialogue": {
       "describe": "-",
-      "offer": "These were all preparations.  Now, let's make a farm!  The local <name_b>'s will never work, so I need some other workforce.  I recently asked our leader how I can resolve this issue, and he said that he would think about it.  Talk to the leader if he's got anything.   QUEST NOT FINISHED YET!",
+      "offer": "These were all preparations.  Now, let's make a farm!  The local <name_b>'s will never work, so I need some other workforce.  I recently asked our leader how I can resolve this issue, and he said that he would think about it.  Talk to the leader if he's got anything.",
       "accepted": "Excellent.  If he agreed on everything, then we will have to deliver at least a dozen workers.",
       "rejected": "And I wanted to make you my partner…",
       "advice": "The more you deliver here, the larger our fields will be, and, accordingly, our income.  Try to get them safe and sound.",

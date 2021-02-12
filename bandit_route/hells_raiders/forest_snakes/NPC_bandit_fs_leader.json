@@ -307,7 +307,7 @@
   {
     "type": "talk_topic",
     "id": "TALK_bandit_fs_leader_rc_rs_hh",
-    "dynamic_line": "Hmm, I don't even know how you can help me.  But if you can find a way to solve this problem, I will be grateful.",
+    "dynamic_line": "Hmm, I don't even know how you can help me.  But if you can find a way to solve this problem, I would be grateful.",
     "speaker_effect": {
       "effect": [
         { "u_add_var": "fs_leader_mission_khh", "type": "count", "context": "unmarked_mission_progress", "value": "1" },
@@ -318,7 +318,7 @@
   {
     "type": "talk_topic",
     "id": "TALK_bandit_fs_leader_rc_khh",
-    "dynamic_line": "Hmm, that's how it is.  I think I have an idea.  Now I need to contact Mister T to see what we can agree on.  When you have time, talk to him about it, say I sent you.  Now go.",
+    "dynamic_line": "Hmm, that's how it is.  I think I have an idea.  Now I need to contact Mister T to see what we can agree on.  When you have time, talk to him about it, say that I sent you.  Now go.",
     "speaker_effect": {
       "effect": { "u_add_var": "fs_leader_mission_khh", "type": "count", "context": "unmarked_mission_progress", "value": "3" }
     }
@@ -345,8 +345,7 @@
           "value": 3
         },
         "effect": { "u_adjust_var": "bandit_recruiter_reward", "type": "count", "context": "reward", "adjustment": 1 }
-      },
-      { "effect": { "u_lose_var": "fs_leader_mission_khh", "type": "count", "context": "unmarked_mission_progress" } }
+      }
     ]
   },
   {

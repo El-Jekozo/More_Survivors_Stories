@@ -89,7 +89,7 @@
       {
         "text": "It will be done.",
         "topic": "TALK_DONE",
-        "effect": { "u_add_var": "search_for_bandit", "type": "flag", "context": "bandits", "value": "yes" }
+        "effect": { "u_add_var": "rc_search_for_bandit", "type": "count", "context": "unmarked_mission_progress", "value": "1" }
       }
     ]
   },
