@@ -5,6 +5,7 @@
     "class": "NC_SCAVENGER",
     "attitude": 0,
     "mission": 8,
+    "gender": "female",
     "chat": "TALK_bandit_gs_e",
     "faction": "grim_sisters"
   },

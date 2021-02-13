@@ -5,6 +5,7 @@
     "class": "NC_NONE",
     "attitude": 1,
     "mission": 8,
+    "gender": "female",
     "chat": "TALK_bandit_gs_leader_start",
     "faction": "grim_sisters"
   },

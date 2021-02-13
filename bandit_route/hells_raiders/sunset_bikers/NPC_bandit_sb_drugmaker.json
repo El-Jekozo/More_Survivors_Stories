@@ -73,7 +73,7 @@
         { "mapgen_update": "bandit_sb_drugmaker_farm1", "om_terrain": "ws_biker_dump_0_1" },
         { "mapgen_update": "bandit_sb_drugmaker_farm2", "om_terrain": "ws_biker_dump_0_2" },
         { "npc_lose_var": "wait_for_farm", "type": "time", "context": "open_mission" },
-        { "u_add_var": "sb_farm_done", "type": "flag", "context": "open_trade", "value": "yes" },
+        { "u_add_var": "sb_narc_farm", "type": "switch", "context": "farm_status", "value": "working" },
         { "npc_add_var": "wait_for_m4", "type": "time", "context": "open_mission", "time": true }
       ]
     },
@@ -120,7 +120,7 @@
       },
       {
         "text": "Let's trade.",
-        "condition": { "u_has_var": "sb_farm_done", "type": "flag", "context": "open_trade", "value": "yes" },
+        "condition": { "u_has_var": "sb_narc_farm", "type": "switch", "context": "farm_status", "value": "working" },
         "topic": "TALK_bandit_sb_drugmaker1",
         "effect": "start_trade"
       },
@@ -287,10 +287,9 @@
         }
       ],
       "effect": [
-        { "u_lose_var": "sb_farm_done", "type": "flag", "context": "open_trade" },
         { "u_buy_item": "gasbomb", "count": 5 },
         { "u_buy_item": "mask_gas" },
-        { "u_add_var": "narc_farm", "type": "flag", "context": "sb_farm_burned", "value": "yes" }
+        { "u_add_var": "sb_narc_farm", "type": "switch", "context": "farm_status", "value": "burned" }
       ]
     },
     "origins": [ "ORIGIN_SECONDARY" ],

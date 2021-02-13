@@ -481,7 +481,7 @@
     "dialogue": {
       "describe": "-",
       "offer": "It's time to act.  We have been looking closely at this center for quite some time.  It is quite spacious, there are many different supplies, and most importantly, it is full of helpless survivors.  In short, we need to capture this center.  Are you in business?",
-      "accepted": "Raid Refugee Center and kill Merchant, Broker, Doctor and OG Rep.  If you need help, take my men with you, they can help you.  You're free to go.",
+      "accepted": "Raid Refugee Center and kill everyone inside.  If you need help, take my men with you, they can help you.  You're free to go.",
       "rejected": "Then don't waste my time, <name_b>.",
       "advice": "Remember to do some scouting before you start.  If you can, from the inside.  Find out the route of their patrols, the sentry posts, all that.",
       "inquire": "How is it going?",

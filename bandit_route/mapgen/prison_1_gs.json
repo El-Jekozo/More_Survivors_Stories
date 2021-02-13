@@ -32,7 +32,7 @@
         "                       sss________________sss                           ",
         "                      sss________________sss                            ",
         " sssssssssssssssssssssss________________sss                             ",
-        " s_____________________________________s|-wwww----------------ww--ww--| ",
+        " s_____________________________________Q|-wwww----------------ww--ww--| ",
         " s_____________________________________s|hhh,,,=,,,,,,,,,,,,=,,,,,,,,,| ",
         " s_____________________________________s+,,,,d,|--------=---|G|h|h|h|h| ",
         " s_____________________________________s+,,,,dh|S,T|l,,,,,+<|,|g|g|g|g| ",
@@ -66,7 +66,7 @@
         " |    |,,,,,,,,,,,,,,| ss |,,htth,,,,,,htth,9| ss |,,,,,,,,,,,9,,|    | ",
         " |    R>,,,,,,,,,,,,,=ssss=,,htth,,,,,,htth,,=ssss=,,,,,,,,,,,,,>R    | ",
         " |    R>,,,,,,,,,,,,,=ssss=,,htth,,,,,,htth,,=ssss=,,,,,,,,,,,,,>R    | ",
-        " |    |,,,,9,,,,9,,,,| ss |,,htth,,,,,,htth,,| ss |,,,,9,,,,9,,,,|    | ",
+        " |    |,,,,9,,,,9,,,,| ss |,,htth,,,,,,htth,,| ss |,,,,,,,,,,,,,,|    | ",
         " |    |----|BGGB|----|fHHf|,,,,,,,,,,,,,,,,,,|fHHf|----|BGGB|----|    | ",
         " |    |T,,,B,,,,B,,bb| ss |--ccccc--|--------| ss |T,,,B,,,,B,,bb|    | ",
         " |    R,7,,Z,,,,Z,7,,R ss R,,,,,,,,,|zzzzzzzz| ss R,7,,Z,,,,Z,,,,R    | ",
@@ -199,7 +199,8 @@
         "/": "t_thconc_floor",
         "&": "t_thconc_floor",
         "$": "t_thconc_floor",
-        "*": "t_wall_metal"
+        "*": "t_wall_metal",
+        "Q": "t_sidewalk"
       },
       "furniture": {
         "X": "f_exercise",
@@ -249,10 +250,13 @@
       "place_npcs": [
         { "class": "NPC_bandit_gs_cook", "x": 28, "y": 46 },
         { "class": "NPC_bandit_gs_prisoner1", "x": 61, "y": 42 },
+        { "class": "bandit_gs_g", "x": 55, "y": 40 },
+        { "class": "bandit_gs_g", "x": 60, "y": 40 },
         { "class": "bandit_gs", "x": 56, "y": 34 },
         { "class": "NPC_bandit_gs_e", "x": 50, "y": 14 }
       ],
-      "nested": { "7": { "chunks": [ [ "null", 65 ], [ "NPC_bandit_gs_slave_spawn", 35 ] ] } }
+      "nested": { "7": { "chunks": [ [ "null", 65 ], [ "NPC_bandit_gs_slave_spawn", 35 ] ] } },
+      "signs": { "Q": { "signage": "Trespassers will be shot. Survivors will be enslaved." } }
     }
   },
   {

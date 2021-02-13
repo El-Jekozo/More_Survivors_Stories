@@ -10,6 +10,7 @@
     "class": "NC_SURVIVOR_CHEF",
     "attitude": 0,
     "mission": 8,
+    "gender": "female",
     "chat": "TALK_bandit_gs_cook",
     "faction": "grim_sisters"
   },
